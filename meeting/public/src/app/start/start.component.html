@@ -1,0 +1,37 @@
+<div class="wrapper">
+    <div class="new_meeting">
+        <h3 class='form_title'>Create Meeting</h3>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Meeting Title</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Meeting Type</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                <option>Casual</option>
+                <option>Development</option>
+                <option>Report</option>
+                <option>Planning</option>
+                <option>Problem Solve</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Meeting Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button [routerLink]="['/meeting']" class="btn btn-success">Create Meeting</button>
+        </form>
+    </div>
+    <div class="join_meeting">
+        <h3 class='form_title'>Join Meeting</h3>
+        <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputPassword2" class="sr-only">Meeting ID</label>
+                <input type="password" class="form-control" id="inputPassword2" placeholder="Meeting ID...">
+            </div>
+            <button [routerLink]="['/meeting']" class="btn btn-success mb-2">Join Meeting</button>
+        </form>
+    </div>
+  </div>
+    <a class="meeting_history btn btn-success" [routerLink]="['/records']">Meeting History</a>

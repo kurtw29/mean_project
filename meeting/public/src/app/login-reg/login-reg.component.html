@@ -1,0 +1,66 @@
+<div class="wrapper">
+    <div class="demo">Demo the app here</div>
+    <div class="loginReg_box">
+        <form class="login">
+            <h3 class='form_title'>Login:</h3>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <a [routerLink]="['/start']" class="btn btn-primary">Login!</a>
+        </form>
+        <hr>
+        <form class="reg">
+                <h3 class='form_title'>Registration:</h3>
+
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="validationServer01">First name</label>
+                    <input type="text" class="form-control is-valid" Example textareaid="validationServer01" placeholder="First name" value="Mark" required>
+                    <div class="valid-feedback">
+                    Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="validationServer02">Last name</label>
+                    <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Last name" value="Otto" required>
+                    <div class="valid-feedback">
+                    Looks good!
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for='department'>Department</label>
+                    <select class="custom-select custom-select-md">
+                        <option selected>Your department</option>
+                        <option value="hr">Human Resource</option>
+                        <option value="softdev">Software Development</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="sales">Sales</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">        
+                    <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <label for="exampleInputPassword2">Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+                </div>
+            </div>
+            <a [routerLink]="['/start']" class="btn btn-primary">Register!</a>
+        </form>
+    </div>
+</div> <!--closing div.wrapper />-->

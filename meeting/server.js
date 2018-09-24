@@ -17,5 +17,8 @@ app.use(express.static(__dirname + "/public/dist/public"));
 // app.get("/records", function(req,res){
 //     res.sendFile(__dirname+'/views/records.html');
 // })
-
+var path = require('path');
+app.get('*', (req, res)=>{
+    res.sendFile(path.resolve('./public/dist/public/index.html'))
+} )
 app.listen(8000);
