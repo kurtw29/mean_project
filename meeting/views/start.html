@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clickable Prototype Meeting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="main.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="main.less" />
+    <link rel="stylesheet/less" type="text/css" href="start.less" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- Heading Navi-bar top -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Belibe Torri</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item active">
+            <a class="nav-link" href="#">Belibe Torri <span class="sr-only">(current)</span></a>
+        </li> -->
+        <li class="nav-item active">
+            <a class="nav-link" href="/meeting">@ Meeting: clicking prototypo</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select some feature
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Chat</a>
+            <a class="dropdown-item" href="#">Poll</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Meeting Overview</a>
+            </div>
+        </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <a class="btn btn-outline-success my-2 my-sm-0 nav_join_meeting" href="/start">Join Meeting</a>
+        <a class="btn btn-outline-success my-2 my-sm-0 login" href="/">Login</a>
+        </form>
+    </div>
+</nav>        
+<div class="wrapper">
+    <div class="new_meeting">
+        <h3 class='form_title'>Create Meeting</h3>
+        <form>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Meeting Title</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlSelect1">Meeting Type</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                <option>Casual</option>
+                <option>Development</option>
+                <option>Report</option>
+                <option>Planning</option>
+                <option>Problem Solve</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">Meeting Description</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <a href="/meeting" class="btn btn-success">Create Meeting</a>
+        </form>
+    </div>
+    <div class="join_meeting">
+        <h3 class='form_title'>Join Meeting</h3>
+        <form class="form-inline">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputPassword2" class="sr-only">Meeting ID</label>
+                <input type="password" class="form-control" id="inputPassword2" placeholder="Meeting ID...">
+            </div>
+            <button type="submit" class="btn btn-success mb-2">Join Meeting</button>
+        </form>
+    </div>
+    <a class="meeting_history btn btn-success" href='records'>Meeting Records</a>
+
+</div>
+</body>
+</html>

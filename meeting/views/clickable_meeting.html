@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clickable Prototype Meeting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="main.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="main.less" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.7.1/less.min.js" ></script>
+
+</head>
+<body>
+    <!-- Heading Navi-bar top -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Belibe Torri</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active">
+                <a class="nav-link" href="#">Belibe Torri <span class="sr-only">(current)</span></a>
+            </li> -->
+            <li class="nav-item active">
+                <a class="nav-link" href="#">@ Meeting: clicking prototypo</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Select some feature
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Chat</a>
+                <a class="dropdown-item" href="#">Poll</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Meeting Overview</a>
+                </div>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <a class="btn btn-outline-success my-2 my-sm-0" href="/start">Leave Meeting</a>
+            </form>
+        </div>
+    </nav>        
+    
+
+    <!-- Heading for incoming users output boxes -->
+    <div class="wrapper">
+        <div class="other_user_box">
+            <div class="other_user">
+                <h4 class='user_name'>Capa Delore</h4><hr>
+                <div class="chatbox">
+                    <p><span class='timestamp'>10:20am: </span> Hello</p>
+                </div>
+            </div>
+            <div class="other_user">
+                <h4 class='user_name'>Boriy Linto</h4><hr>
+                <div class="chatbox">
+                    <p><span class='timestamp'>10:20am: </span> Bonjour</p>
+                </div>
+            </div>
+            <div class="other_user">
+                <h4 class='user_name'>Cree Bistro</h4><hr>
+                <div class="chatbox">
+                    <p><span class='timestamp'>10:20am: </span> NiHao</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Question Here -->
+        <div class="question_box">
+            <h2 class='question_category'>Framing Questions:</h2>
+            <h2 class='question'>"<span class="question">Why is whatever something whenever sometimes someday?</span>"</h2>
+        </div>
+
+        <!-- user input here -->
+        <form class="input_box">
+            <textarea class="input_text"></textarea>
+            <input type='submit' class="input_submit" value='Send'>
+        </form>
+    </div>
+</body>
+</html>

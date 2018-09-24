@@ -1,0 +1,114 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background-color:lightgoldenrodyellow;
+}
+a.login{
+    margin-left:20px;
+}
+.wrapper{
+    // background-color:lightblue;
+    margin-top:50px;
+
+    .demo{
+        border: 1px solid green;
+        border-radius: 10px;
+        padding: 20px;
+        width: 900px;
+        min-height: 400px;
+        margin: 30px auto;
+    }
+    .loginReg_box{
+        border: 1px solid green;
+        border-radius: 10px;
+        padding: 20px;
+        width: 900px;
+        min-height: 400px;
+        margin: 30px auto;
+
+        hr{
+            border:1px solid darkgreen;
+        }
+
+        form.login{
+            margin-bottom:20px;
+
+            .form_title{
+                text-decoration: underline;
+            }
+        }
+        form.reg{
+            margin-top: 20px;
+
+            .form_title{
+                text-decoration: underline;
+            }
+        }
+    }
+    .other_user_box{
+        padding:5px;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-evenly;
+        
+        .other_user{
+            display:inline-block;
+            width:240px;
+            padding:10px;
+            margin:5px;
+            border:1px solid blue;
+            border-radius:10px;
+            .user_name{
+                border-bottom: 1px solid blue;
+                color:blue;
+                font-style:italic;
+            }
+            .chatbox{
+                .timestamp{
+                    color:blue;
+                    font-style:italic;
+                }
+            }
+        }
+    }
+
+    .question_box{
+        margin:100px 0px;
+        padding: 0px 10%;
+        h2.question_category{
+            text-align: start;
+            margin-bottom:20px;
+        }
+
+        h2.question{
+            text-align:center;
+        }
+        
+    }
+
+    .input_box{
+        display:flex;
+        flex:end;
+        padding:0px 10%;
+        margin-top:20%;
+
+        .input_text{
+            height:150px;
+            // width:600px;
+            width:80%;
+            padding:10px;
+            border-radius:10px;
+            background-color:lightcyan;
+        }
+        .input_submit{
+            // margin:0px 10px;
+            // width:120px;
+            width:19%;
+            border-radius:10px;
+            background-color:lightblue;
+        }
+    }
+}
