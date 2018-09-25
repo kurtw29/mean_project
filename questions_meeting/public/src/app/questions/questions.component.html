@@ -1,0 +1,18 @@
+<table class='highlight responsive-table 'style='margin-top:10%'>
+    <thead>
+      <tr>
+          <th>Decision Quality</th>
+          <th>Question Type</th>
+          <th>Question</th>
+          <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let q of questions">
+        <td>{{ q.quality }}</td>
+        <td>{{ q.type }}</td>
+        <td>{{ q.question }}</td>
+        <td><button class='btn green'>Edit</button><button class='btn red' style='margin-left:20px;'>Delete</button></td>
+      </tr>
+    </tbody>
+  </table>

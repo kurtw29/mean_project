@@ -21,6 +21,8 @@ var QuestionSchema = new mongoose.Schema({
 const Question = mongoose.model('question', QuestionSchema);
 
 // ROUTING FOR CRUD
+
+//get all requestions
 app.get("/questions", (req, res) => {
     console.log("Enter /questions for retrive all questions");
     Question.find({})
@@ -89,23 +91,19 @@ app.post("/question_random", (req, res) =>{
     .catch(
         error => res.json({message: false, err:error})
     )
-    // if(pick == 0){
-    //     pick_quality = "framing"
-    // }
-    // var pick_type = random();
 })
 
 //get question given quality & type **** SHOULDN'T THIS BE A POST?
-app.get("/specific_question", (req, res) => {
-    console.log("Enter / questions/parameters for retrieve question by params");
-    Question.find({ quality: req.body.quality, type: req.body.type})
-    .then (
-        data => res.json({message: true, questions: data})
-    )
-    .catch(
-        error => res.json({message:false, err: error})
-    )
-});
+// app.get("/specific_question", (req, res) => {
+//     console.log("Enter / questions/parameters for retrieve question by params");
+//     Question.find({ quality: req.body.quality, type: req.body.type})
+//     .then (
+//         data => res.json({message: true, questions: data})
+//     )
+//     .catch(
+//         error => res.json({message:false, err: error})
+//     )
+// });
 
 app.put("/question/:id", (req, res) => {
     console.log("Enter PUT /questionfor UPDATE question. req.body: ", req.body);
@@ -118,7 +116,6 @@ app.put("/question/:id", (req, res) => {
     )
 });
 
-
 app.delete("/question/:id", (req, res) => {
     console.log("Enter DELETE /question/:id for delete question by id");
     Question.remove({_id: req.params.id})
@@ -129,46 +126,6 @@ app.delete("/question/:id", (req, res) => {
         error => res.json({message: false, err: error})
     )
 });
-
-// app.delete("/questionReview/:mvid&:_id", (req, res) => {
-//     console.log("delete(questionReview), req.params: ", req.params)
-//     question.update({_id:req.params.mvid}, {$pull: {reviewing:{_id:req.params._id}}})
-//     .then(
-//         data => {
-//             console.log('finding movie to delete true')
-            // Review.remove({_id: req.params._id})
-            // .then(
-            //     data => {
-            //         console.log("betreview remove true")
-            //         res.json({message: true, question: data})
-            //     }
-            // )
-            // res.json({message: true, question: data})
-            
-            // .catch(
-            //     error => {
-            //         console.log("betreview remove error")
-            //         res.json({message: false, err: error})
-            //     }
-            // )
-    //     }
-    // )
-    // .catch(
-    //     error => {
-    //         console.log('finding movie to delete review: promise:error')
-    //         res.json({message: false, err: error})
-    //     }
-    // )
-        // console.log("Enter DELETE /question/:id for delete question by id");
-    // Review.remove({_id: req.params.mvid})
-    // .then(
-    //     data => res.json({message: true, question: data})
-    // )
-    // .catch(
-    //     error => res.json({message: false, err: error})
-    // )
-// });
-
 
 app.get('*', (req, res) => {
     res.sendFile(path.resolve('./public/dist/public/index.html'))
