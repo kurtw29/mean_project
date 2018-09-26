@@ -1,4 +1,28 @@
-button{
+.selection{
+    margin:20px auto 0px auto;
+}
+
+button.refine{
+    display:block;
     border-radius:10px;
     width:80px;
+    margin-top:30px;
+}
+.button_box{
+    display:flex;
+    
+}
+button{
+    display:block;
+    border-radius:10px;
+    width:80px;
+}
+form{
+    display:flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.checkbox{
+    width:124px;
 }

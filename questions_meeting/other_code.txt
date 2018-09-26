@@ -1,0 +1,53 @@
+<!-- Checkboxes for Qualities and Types -->
+<!-- <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Question's Decision Quality</label> -->
+<!-- <div class="row checkbox">
+  <p>Decision Qualities: </p>
+  <label>
+    <input type="checkbox" value="alternative" name='alternative' (click)="onNewTouchy()" [(ngModel)]="selected['alternative']" />
+    <span>Alternative</span>
+  </label>
+  <label>
+    <input type="checkbox" value="commitment" name='commitment' (click)="onNewTouchy()"  [(ngModel)]="selected['commitment']" />
+    <span>Commitment to Action</span>
+  </label>
+</div>
+<div class="row checkbox">
+  <label>
+    <input type="checkbox" name='framing'  value="framing" (click)="onNewTouchy()" [(ngModel)]="selected['framing']"/>
+    <span>Framing</span>
+  </label>
+  <label>
+    <input type="checkbox"  value="information"  name='information' (click)="onSelected()" [(ngModel)]="selected['information']" />
+    <span>Information</span>
+  </label>
+</div>
+<div class="row checkbox">
+  <label>
+    <input type="checkbox" value="integration"  name='integration'(click)="onSelected()" [(ngModel)]="selected['integration']" />
+    <span>Integration</span>
+  </label>
+  <label>
+    <input type="checkbox" value="values" name='values' (click)="onSelected()" [(ngModel)]="selected['values']" />
+    <span>Values</span>
+  </label>
+</div>
+<div class="row checkbox">
+    <p>Type of Question</p>
+    <label>
+      <input type="checkbox" checked value="head" name='head' [(ngModel)]="selected['head']" />
+      <span>Head</span>
+    </label>
+    <label>
+      <input type="checkbox" checked value="heart" name='heart' [(ngModel)]="selected['heart']" />
+      <span>Heart</span>
+    </label>
+</div>
+<button type="submit" class="btn btn-primary my-1">Refine</button>
+</form>
+
+{{ selected | json }}
+
+{{ framing | json}}
+<p>checkbox selected is {{framing}}</p> -->
+
+<!-- Populate the questions - table -->

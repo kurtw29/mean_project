@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/public/dist/public'));
 
 //set up mongoose MODEL
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/meeting')
+mongoose.connect('mongodb://localhost/meeting', {useNewUrlParser:true})
 var QuestionSchema = new mongoose.Schema({
     question: {type:String, required: [true, "cannot submit empty question"], minlength:[4, "must be at least 4 characters"]},
     type: {type:String, required:[true, "must include the type of question"]}, // HEAD OR HEART
@@ -25,7 +25,7 @@ const Question = mongoose.model('question', QuestionSchema);
 //get all requestions
 app.get("/questions", (req, res) => {
     console.log("Enter /questions for retrive all questions");
-    Question.find({})
+    Question.find({}).sort({quality: "asc", type:"asc"})
     .then(
         data => res.json({message: true, decisions: data})
     )
@@ -34,6 +34,7 @@ app.get("/questions", (req, res) => {
     )
 });
 
+// Add/Create a question
 app.post("/question", (req, res) =>{
     console.log("Enter POST /question to CRAETE a question. req.body: ", req.body);
     Question.create(req.body)
@@ -45,8 +46,7 @@ app.post("/question", (req, res) =>{
     )
 });
 
-
-
+// Retrive a question by id
 app.get("/question/:id", (req, res) => {
     console.log("Enter /question/:id for retrive question by id");
     Question.findOne({_id: req.params.id})
@@ -76,10 +76,10 @@ app.get("/random", (req, res) => {
 })
 
 // random question from selected "Qulity" and "Type" of question.
-app.post("/question_random", (req, res) =>{
+app.get("/question_random/:quality/:type", (req, res) =>{
     console.log("Entered /question_random ")
-    var pick = Math.trunc(Math.random()*6);
-    Question.find({quality: req.body.quality, type: req.body.type})
+    // var picker = Math.trunc(Math.random()*6);
+    Question.find({quality: req.params.quality, type: req.params.type})
     .then(
         data => {
             console.log("success, ", data.length)
@@ -93,19 +93,34 @@ app.post("/question_random", (req, res) =>{
     )
 })
 
-//get question given quality & type **** SHOULDN'T THIS BE A POST?
-// app.get("/specific_question", (req, res) => {
-//     console.log("Enter / questions/parameters for retrieve question by params");
-//     Question.find({ quality: req.body.quality, type: req.body.type})
-//     .then (
-//         data => res.json({message: true, questions: data})
-//     )
-//     .catch(
-//         error => res.json({message:false, err: error})
-//     )
-// });
+// retrieving question given user's choice of quality & type
+app.get("/questions/:quality/:type", (req, res) => {
+    console.log("Enter / questions/parameters for retrieve question by params");
+    console.log("type: ", req.params.type);
+    if(req.params.type == 'head' || req.params.type=='heart'){
+        console.log("head or heart")
+        Question.find({ quality: req.params.quality, type: req.params.type})
+        .then (
+            data => res.json({message: true, questions: data})
+        )
+        .catch(
+            error => res.json({message:false, err: error})
+        )
+    }else{
+        console.log("else if")
+        Question.find({quality:req.params.quality})
+        .then (
+            data => res.json({message: true, questions: data})
+        )
+        .catch(
+            error => res.json({message:false, err: error})
+        )
 
-app.put("/question/:id", (req, res) => {
+    }
+});
+
+// Edit a question
+app.put("/questionid/:id", (req, res) => {
     console.log("Enter PUT /questionfor UPDATE question. req.body: ", req.body);
     Question.updateOne({_id: req.params.id}, req.body)
     .then(
@@ -116,6 +131,7 @@ app.put("/question/:id", (req, res) => {
     )
 });
 
+// Delete a question by id
 app.delete("/question/:id", (req, res) => {
     console.log("Enter DELETE /question/:id for delete question by id");
     Question.remove({_id: req.params.id})

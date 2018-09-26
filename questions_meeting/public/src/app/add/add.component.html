@@ -1,0 +1,26 @@
+<form (submit)="OnAdd()">
+  <div class="form-group">
+    <label for="question_quality">Decision Qualities</label>
+    <select name='quality' [(ngModel)]="addInfo.quality" class="form-control" id="exampleFormControlSelect1">
+      <option value='alternative'>Alternative</option>
+      <option value = 'commitment'>Commitment to Action</option>
+      <option value='framing'>Framing</option>
+      <option value='information'>Information</option>
+      <option value='integration'>Integration</option>
+      <option value='values'>Values</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="question_type">Question Type</label>
+    <select name='type' [(ngModel)]="addInfo.type" class="form-control" id="exampleFormControlSelect1">
+      <option value='head'>Head</option>
+      <option value='heart'>Heart</option>
+    </select>
+  </div>
+
+  <div class="form-group"> 
+    <label for="exampleFormControlTextarea1">Question</label>
+    <textarea name='question' [(ngModel)]="addInfo.question" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button type='submit' class='btn btn-primary'>Submit</button>
+</form>
