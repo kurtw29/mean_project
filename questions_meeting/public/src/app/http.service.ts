@@ -44,4 +44,5 @@ export class HttpService {
     console.log("service.ts / delete(id), id: ", id )
     return this._http.delete("/question/"+id);
   }
+
 }

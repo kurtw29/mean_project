@@ -4,12 +4,12 @@
     <label>Question Qualities</label>
     <select name='quality' required [(ngModel)]="selected['quality']" class="custom-select custom-select-lg mb-3">
       <!-- <option value="" disabled selected>Choose your Quality</option> -->
-      <option value="alternative">Alternative</option>
-      <option value="commitment">Commitment to Action</option>
-      <option value="framing">Framing</option>
-      <option value="information">Information</option>
-      <option value="integration">Integration</option>
-      <option value="values">Values</option>
+      <option value="Alternative">Alternative</option>
+      <option value="Commitment">Commitment to Action</option>
+      <option value="Framing">Framing</option>
+      <option value="Information">Information</option>
+      <option value="Integration">Integration</option>
+      <option value="Values">Values</option>
     </select>
     <p *ngIf="error">{{error}}</p>
   </div>
@@ -17,8 +17,8 @@
     <label>Question Types</label>
     <select name='type' required [(ngModel)]="selected['type']" class="custom-select custom-select-lg mb-3">
       <!-- <option value="" disabled selected>Choose your Type</option> -->
-      <option value="head">Head</option>
-      <option value="heart">Heart</option>
+      <option value="Head">Head</option>
+      <option value="Heart">Heart</option>
     </select>
   <p *ngIf="error">{{error}}</p>
   </div>

@@ -34,4 +34,29 @@ export class AddComponent implements OnInit {
     })
   }
 
+
+  //this is THE FOR-LOOP TOQUESTIONS (need to unlock HTML "generate button")
+  // OnAddLoop(dataLoop) {
+  //   console.log("This is the data we are adding, ", dataLoop)
+  //   let obs = this._http.add(dataLoop)
+  //   obs.subscribe(data => {console.log("This is the data we got back from service", data)
+  //   if(data['message'] == true){
+  //     console.log("We successfully added the new question");
+  //     this._router.navigate(['/browse']);
+  //   }
+  //   else {
+  //     console.log("We had some errors adding a question ", data['err'])
+  //   }
+  //   })
+  // }
+  // generate(){
+  //   for(let q of ["Framing", "Alternative", "Information", "Integration", "Values", "Commitment"]){
+  //     for(let t of ["Head", "Heart"]){
+  //       for(let i=0; i < 10; i++){
+  //         this.OnAddLoop({question: `For-Looped Question: ${i}`, quality:`${q}`, type:`${t}`})
+  //       }
+  //     }
+  //   }
+  //   return (console.log("Complete for-looped question genereateQ()"))
+  // }
 }
